@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="Semantic-UI-master/dist/semantic.min.css">
+		<!-- Semantic -->
+		<script src="Semantic-UI-master/dist/semantic.min.js" type="text/javascript" charset="utf-8" async defer></script>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8" async defer></script>
+		<script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer></script>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="bootstrap-3.3.6/dist/css/bootstrap.min.css">
+		<script src="bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery_rotate.js"></script>
+		<style>
+/*指定整個banner的大小*/
+#banner {
+	width: 100%;
+	margin-top: 57px;
+}
+		/*指定整個banner 內 item 的大小與圖片來源*/
+		.banner_item {
+			background-image: url(img/slide_1.jpg);
+			width: 100%;
+			height: 400px;                               
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;                            
+		}
+		.banner_item1{		
+			background-image: url(img/slide_1.jpg);
+			width: 100%;
+			height: 600px;                                                                            
+			background-repeat: no-repeat;			   
+			background-size: contain;
+			background-position: center;                            
+		}
+		.banner_item2{
+			background-image: url(img/slide_1.jpg);
+			width: 100%;
+			height: 600px;                                                                            
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;                              
+		}
+		.panel-body img{
+			width: 2.5%;
+			height: 3em;
+			margin-left: 2.5em;
+		}
+		</style>
+	</head>
+
+	<body style="font-size: 1.7em;Font-family:DFKai-sb;">
+		<div class="ui grid">
+			<div id="banner">
+				<a id="area0"></a>
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval=false>
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner" role="listbox">
+						<div class="item active banner_item">
+							<div class="carousel-caption" style="margin-bottom:10px">
+							</div>
+						</div>
+						<div class="item banner_item1">
+							<div class="carousel-caption" style="margin-bottom:10px">
+							</div>
+						</div>
+						<div class="item banner_item2">
+							<div class="carousel-caption" style="margin-bottom:10px">
+							</div>			
+						</div>
+					</div>
+					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<a id="area1"></a>
+		<div class="ui divider"></div>
+		<div class="ui raised very padded container basic segment">
+			<h1 class="ui horizontal divider header">
+				關於我們
+			</h1>
+		</div>
+
+		<a id="area3"></a>
+		<div class="ui divider"></div>
+		<div class="ui raised very padded container basic segment">
+			<h1 class="ui horizontal divider header">
+				服務項目
+			</h1>
+		</div>
+		
+		<a id="area4"></a>
+		<div class="ui raised very padded container basic segment">
+				<h1 class="ui horizontal divider header">
+				</h1>
+			</div>
+		</div>
+		
+		<a id="area5"></a>
+		<div class="ui raised very padded container basic segment">
+			<div class="ui horizontal divider header">
+				<h1 class="ui ">
+			</div>
+		</div>
+		<div class="ui top demo nine inverted item labeled icon sidebar menu visible">
+			<a class="item" href="#" id="link0"><i class="home icon"></i> Top </a>
+			<a class="item" href="#" id="link1"><i class="list layout icon"></i>關於我們</a>
+			<a class="item" href="#" id="link2"><i class="block layout icon"></i>服務項目</a>
+			<a class="item" href="#" id="link3"><i class="newspaper icon"></i>解決方案</a>
+			<a class="item" href="#" id="link4"><i class="book icon"></i>研發團隊</a>
+			<a class="item" href="#" id="link5"><i class="users icon"></i>聯絡我們</a>
+		</div>
+		</div>
+
+		<!--<script>
+$(function () {
+	$('a[href*=#]:not([href=#])').click(function() {
+		var target = $(this.hash);
+		$('html,body').animate({
+			scrollTop: target.offset().top
+		}, 1000);
+		return false;
+	});
+});
+		</script>-->
+		<script>
+
+$(function () {
+	$('#link0').click(function() {
+		$('html,body').animate({
+			scrollTop: $('#area0').offset().top
+		}, 1000);
+		return false;
+	});
+});
+$(function () {
+	$('#link1').click(function() {
+		$('html,body').animate({
+			scrollTop: $('#area1').offset().top
+		}, 1000);
+		return false;
+	});
+});
+$(function () {
+	$('#link2').click(function() {
+		$('html,body').animate({
+			scrollTop: $('#area2').offset().top
+		}, 1000);
+		return false;
+	});
+});
+$(function () {
+	$('#link3').click(function() {
+		$('html,body').animate({
+			scrollTop: $('#area3').offset().top
+		}, 1000);
+		return false;
+	});
+});
+$(function () {
+	$('#link4').click(function() {
+		$('html,body').animate({
+			scrollTop: $('#area4').offset().top
+		}, 1000);
+		return false;
+	});
+});
+$(function () {
+	$('#link5').click(function() {
+		$('html,body').animate({
+			scrollTop: $('#area5').offset().top
+		}, 1000);
+		return false;
+	});
+});
+
+$(document).ready(function() {
+	$('.ui.avatar.image').popup({
+		hoverable: true, 
+		position: 'top left'
+	});
+	$('.large.help.circle.icon').popup({
+		hoverable: true, 
+		position: 'top left'
+	});
+});
+		</script>
+
+		<script>
+$('.context.example .ui.sidebar').sidebar({context: $('.context.example .bottom.segment')}).sidebar('attach events', '.context.example .menu .item');
+
+$(".ui.avatar.image").rotate({ 
+	bind: 
+	{ 
+		mouseover : function() { 
+			$(this).rotate({animateTo:360,duration:4000})
+		},
+		mouseout : function() { 
+			$(this).rotate({animateTo:0})
+		}
+	} 
+});
+		</script>
+
+	</body>
+
+</html>
