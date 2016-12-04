@@ -6,19 +6,22 @@
 		<title></title>
 		<!-- JQuery 3 -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
-		<!-- Semantic -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
-		<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
 		<!-- Bootstrap -->
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="static/js/jquery_rotate.js"></script>
+		<!-- Semantic -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
+		<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
 		<style>
-/*指定整個banner的大小*/
+        /*指定整個banner的大小*/
 #banner {
 	width: 100%;
 	margin-top: 57px;
 }
+		.content-seg {
+		min-height: 300px;
+		}
 		/*指定整個banner 內 item 的大小與圖片來源*/
 		.banner_item {
 			background-image: url(static/img/slide_1.jpg);
@@ -47,59 +50,68 @@
 		</style>
 	</head>
 
-	<body style="font-size: 1.7em;Font-family:DFKai-sb;">
-			<div id="banner">
-				<a id="area0"></a>
-				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval=false>
-					<ol class="carousel-indicators">
-						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-					</ol>
-					<div class="carousel-inner" role="listbox">
-						<div class="item active banner_item">
-							<div class="carousel-caption" style="margin-bottom:10px">
-							</div>
-						</div>
-						<div class="item banner_item1">
-							<div class="carousel-caption" style="margin-bottom:10px">
-							</div>
-						</div>
-						<div class="item banner_item2">
-							<div class="carousel-caption" style="margin-bottom:10px">
-							</div>			
+	<body>
+		<div id="banner">
+			<a id="area0"></a>
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval=false>
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<div class="item active banner_item">
+						<div class="carousel-caption" style="margin-bottom:10px">
 						</div>
 					</div>
-					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
+					<div class="item banner_item1">
+						<div class="carousel-caption" style="margin-bottom:10px">
+						</div>
+					</div>
+					<div class="item banner_item2">
+						<div class="carousel-caption" style="margin-bottom:10px">
+						</div>			
+					</div>
 				</div>
+				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
 			</div>
+		</div>
 
-			<a id="area1"></a>
-			<div class="ui raised very padded container basic segment">
-				<h1 class="ui horizontal divider header">
-					關於我們
-				</h1>
-			</div>
+		<a id="area1">
+		</a>
+		<h1 class="ui horizontal divider header">
+			關於我們
+		</h1>
+		<div class="ui raised very padded container basic segment content-seg">
+			<h2 class="ui header">
+				<i class="code icon"></i>    
+				<div class="content">
+					從零開始
+					<div class="sub header">Creation & OpenSource</div>
+				</div>
+			</h2>
 
-			<a id="area3"></a>
-			<div class="ui raised very padded container basic segment">
-				<h1 class="ui horizontal divider header">
-					服務項目
-				</h1>
-			</div>
+		</div>
 
-			<a id="area4"></a>
-			<div class="ui raised very padded container basic segment">
-				<h1 class="ui horizontal divider header">
-				</h1>
-			</div>
+		<a id="area2"></a>
+		<h1 class="ui horizontal divider header">
+			服務項目
+		</h1>
+		<div class="ui raised very padded container basic segment content-seg">
+		</div>
+
+		<a id="area4"></a>
+		<div class="ui raised very padded container basic segment">
+			<h1 class="ui horizontal divider header">
+			</h1>
+		</div>
 
 		<a id="area5"></a>
 		<div class="ui raised very padded container basic segment">
