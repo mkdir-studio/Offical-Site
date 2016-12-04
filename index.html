@@ -14,13 +14,46 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css">
 		<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.js"></script>
 		<style>
-        /*指定整個banner的大小*/
-#banner {
-	width: 100%;
-	margin-top: 57px;
-}
+/*指定整個banner的大小*/
+		#banner {
+			width: 100%;
+			margin-top: 57px;
+		}
 		.content-seg {
 		min-height: 300px;
+		}
+		.ui.header {
+		padding-top:0px;
+		margin-top:0px;
+		}
+		.ui.inverted.menu
+	   	{
+			background:#333;
+		}
+		.ui.header.pd {
+		padding-top:calc(2rem - .14285em);
+		margin-top:0px;
+		}
+
+		.footer-back.segment {
+			margin-top:0px;
+			min-height:40px;
+		}
+		.about.segment {
+			margin-top:0px;
+			min-height:220px;
+		}
+		.about-back {
+			background-color:#333;
+		}
+		.footer-back {
+		background-color:#eee;
+		}
+		.grey-back {
+			background-color:#F9F9F9;
+		}
+		.wh-back {
+			background-color:#F3F3F3;
 		}
 		/*指定整個banner 內 item 的大小與圖片來源*/
 		.banner_item {
@@ -84,12 +117,12 @@
 			</div>
 		</div>
 
-		<a id="area1">
-		</a>
-		<h1 class="ui horizontal divider header">
+		<div class = "grey-back">
+		<a id="area1"></a>
+		<h2 class="ui horizontal divider header pd">
 			關於我們
-		</h1>
-		<div class="ui raised very padded container basic segment content-seg">
+		</h2>
+		<div class="ui raised container basic segment content-seg">
 			<h3 class="ui header">
 				<i class="folder outline icon"></i>    
 				<div class="content">
@@ -112,28 +145,48 @@
 				<p>
 				秉持著與時俱進並且以技術作為研發的優先考量，採用著集結社群力量的開放原始碼的框架進行 Web / App / 資料挖掘 / IoT 的研發，並且提供完善的技術支援以及售後維運。我們擅長的程式語言以 Python , JavaScript 以及 C# 為主，包括著全端 MVC (Flask/Django) 框架 ，資料挖掘的 Kaggle 事件驅動，以 Raspberry PI 為主的 IoT 研發，以及跨平臺行動技術的掌握，並且搭配新形態的 NoSQL 資料庫例如 MongoDB / DocumentDB 進行整合性系統之實作，且我們在伺服器虛擬化例如 ESXi , XEN 以及 OpenStack 的規劃部屬已經有多年的經驗，主流的 AWS , Azure 以及 Bluemix 雲平臺部屬也駕輕就熟。	
 				</p>
+			<br/> 
+		</div>
 		</div>
 
+		<div class = "wh-back">
 		<a id="area2"></a>
-		<h1 class="ui horizontal divider header">
+		<h2 class="ui horizontal divider header pd">
 			服務項目
-		</h1>
-		<div class="ui raised very padded container basic segment content-seg">
+		</h2>
+		<div class="ui raised container basic segment content-seg">
+		</div>
 		</div>
 
+		<div class = "grey-back">
 		<a id="area4"></a>
-		<div class="ui raised very padded container basic segment">
-			<h1 class="ui horizontal divider header">
-			</h1>
+		<h2 class="ui horizontal divider header pd">
+			解決方案
+		</h2>
+		<div class="ui raised container basic segment content-seg">
+		</div>
 		</div>
 
+		<div class = "wh-back">
 		<a id="area5"></a>
-		<div class="ui raised very padded container basic segment">
-			<div class="ui horizontal divider header">
-				<h1 class="ui horizontal divider header">
-				</h1>
-			</div>
+		<h2 class="ui horizontal divider header pd">
+			研發團隊
+		</h2>
+		<div class="ui raised container basic segment content-seg">
 		</div>
+		</div>
+		
+		<div class = "about-back">
+		<a id="area6"></a>
+		<div class="ui raised container basic about segment">
+		</div>
+		</div>
+
+		<div class = "footer-back">
+		<div class="ui raised container basic footer-back segment">
+		</div>
+		</div>
+
 		<div class="ui top demo nine inverted item labeled icon sidebar menu visible">
 			<a class="item" href="#" id="link0"><i class="home icon"></i>Top</a>
 			<a class="item" href="#" id="link1"><i class="list layout icon"></i>關於我們</a>
