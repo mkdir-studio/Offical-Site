@@ -1,0 +1,36 @@
+.content-seg {
+	min-height: 300px;
+}
+.ui.header {
+	padding-top:0px;
+	margin-top:0px;
+}
+.ui.inverted.menu
+{
+	background:#333;
+}
+.ui.header.pd {
+	padding-top:calc(2rem - .14285em);
+	margin-top:0px;
+}
+
+.footer-back.segment {
+	margin-top:0px;
+	min-height:40px;
+}
+.about.segment {
+	margin-top:0px;
+	min-height:220px;
+}
+.about-back {
+	background-color:#333;
+}
+.footer-back {
+	background-color:#eee;
+}
+.grey-back {
+	background-color:#F9F9F9;
+}
+.wh-back {
+	background-color:#F3F3F3;
+}
