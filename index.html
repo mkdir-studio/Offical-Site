@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +9,18 @@
 	</head>
 
 	<body>
+		<style>
+.slide-fade-enter-active {
+	transition: all .3s ease;
+}
+									.slide-fade-leave-active {
+										transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+									}
+									.slide-fade-enter, .slide-fade-leave-active {
+										padding-left: 10px;
+										opacity: 0;
+									}
+		</style>
 		<div id ="app">
 			<div v-on:click="area" class="ui top demo nine inverted item labeled icon sidebar menu visible" id="menubar">
 				<a id="area0" class="item"><i class="home icon"></i>Top</a>
@@ -20,12 +31,12 @@
 				<a id="area5" class="item"><i class="users icon"></i>聯絡我們</a>
 			</div>
 			<div id="d-area0"class = "grey-back">
-				<div class="ui raised basic segment cover-seg">
-						<img class="ui fluid image"
-		 :src="images[Math.abs(currentNumber) % images.length]"
-		 v-on:mouseover="stopRotation"
-		 v-on:mouseout="startRotation"
-		 />
+				<div class="ui raised basic segment cover-seg" style="min-height:666px;">
+					<transition name="slide-fade">
+					    
+					<img class="ui image"v-if="showit" v-bind:src="image">
+						
+					</transition>
 				</div>
 			</div>
 			<div id="d-area1"class = "grey-back">

@@ -1,10 +1,11 @@
-
-new Vue({
+var vueload = new Vue({
 	el: '#app',
 	data: {
-        images: ['static/img/slide_1.jpg', 'static/img/slide_1.jpg' , 'static/img/slide_1.jpg'],
-        currentNumber: 0,
-        timer: null,
+		image: 'static/img/slide_1.jpg',
+		currentNumber: 0,
+		showit: true,
+		show2: false,
+		timer: null,
 		griditem: [
 			{col: 'one' , icon: ' chevron right',},
 			{col: 'three' , h2control:'ok', icon:'write' , content:'專案規劃' , subheader:'完善的專案評估，以達風險最小化，利益最大化。'},
@@ -22,9 +23,6 @@ new Vue({
 			{img: 'static/img/vue.png' , text: '我們採用 Vue.js 此 MVVM (Model-View-ViewModel) 風格的雙向數據綁定 JavaScript 函式庫 。<br/><br/>MVVM 技術能解決傳統 MVC 架構中大量的 Dom 元素造成的效能低落，也能解決掉許多繁瑣的前端問題。傳統架構中會發生的繁複的手動對 Dom 元素做修改，而因為 MVVM 架構中的 View 與 Model 利用了 VeiwModel 進行了雙向綁定，因此我們只要對一方進行修改另一方就會自動同步幾乎減少了所有的手動元素修改。<br/><br/> 而 Vue.js 可以算是 MVVM 最佳的實踐函式庫，不但輕量也完整支援數據雙向綁定，並且 API 使用上簡潔，因此配合純 JavaScript 進行研發能夠研發出高效能且易於維護的前端架構。' }
 		]
 	},
-    ready: function () {
-        this.startRotation();
-    },
 	methods: {
 		area: function (event) {
 			window.scrollTo(0,0); 
@@ -32,17 +30,31 @@ new Vue({
 			baru = document.getElementById("menubar").clientHeight;
 			window.scrollTo(0,u - baru);	   
 		},
-        startRotation: function() {
-            this.timer = setInterval(this.next, 3000);
-        },
-        stopRotation: function() {
-            clearTimeout(this.timer);
-            this.timer = null;
-        },
-        next: function() {
-            this.currentNumber += 1
-        }
+		toggle: function (event) {
+			window.setInterval(function () {
+			setTimeout(function() {
+				vueload.showit = !vueload.showit;
+				if (vueload.image == "static/img/slide_1.jpg")
+				{
+				vueload.image = "static/img/python.png";
+				}
+				else if (vueload.image == "static/img/python.png") 
+				{
+				vueload.image = "static/img/docker.png"
+				}
+				else 
+				{
+				vueload.image = "static/img/slide_1.jpg"
+				}
+			}, 3000)
+			setTimeout(function() {
+				vueload.showit = !vueload.showit;
+			}, 3500)
+			}, 3500);
+
+		}
 
 	}
 })
 
+vueload.toggle();
