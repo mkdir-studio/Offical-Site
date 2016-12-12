@@ -20,7 +20,12 @@
 				<a id="area5" class="item"><i class="users icon"></i>聯絡我們</a>
 			</div>
 			<div id="d-area0"class = "grey-back">
-				<div class="ui raised container basic segment content-seg">
+				<div class="ui raised basic segment cover-seg">
+						<img class="ui fluid image"
+		 :src="images[Math.abs(currentNumber) % images.length]"
+		 v-on:mouseover="stopRotation"
+		 v-on:mouseout="startRotation"
+		 />
 				</div>
 			</div>
 			<div id="d-area1"class = "grey-back">
@@ -114,35 +119,35 @@
 				<a id="d-area5"></a>
 				<div class="ui raised container basic segment about">
 					<div class="ui grid" style="padding-top:30px; padding-bottom:30px;">
-							<div class="two wide middle aligned column">
-								<h1 class="ui icon">
+						<div class="two wide middle aligned column">
+							<h1 class="ui icon">
 								<i class="inverted grey huge call icon"></i>
-								</h1>
-							</div>
-							<div class="one wide column">
-							</div>
-							<div class="six wide column">
-								<p style="color:#eee;">
-								聯絡窗口 
-								<br/>
-								<br/>
-								電話:   05-5374713 楊順凱 <br/>
-								地址:   640 - 雲林縣斗六市雲林路2段 <br/>
-								統編:   25494472 (凱衍資訊社)
-								</p>
-							</div>
-							<div class="one wide column">
-							</div>
-							<div class="six wide column">
-								<p style="color:#eee;">
-								網路窗口 
-								<br/>
-								<br/>
-								服務信箱:   mkdir-tw@gmail.com <br/>
-								合作招募:   reimu@mkdir.tw <br/>
-								IRC:   mkdir-tw@freenode <br/>
-								</p>
-							</div>
+							</h1>
+						</div>
+						<div class="one wide column">
+						</div>
+						<div class="six wide column">
+							<p style="color:#eee;">
+							聯絡窗口 
+							<br/>
+							<br/>
+							電話:   05-5374713 楊順凱 <br/>
+							地址:   640 - 雲林縣斗六市雲林路2段 <br/>
+							統編:   25494472 (凱衍資訊社)
+							</p>
+						</div>
+						<div class="one wide column">
+						</div>
+						<div class="six wide column">
+							<p style="color:#eee;">
+							網路窗口 
+							<br/>
+							<br/>
+							服務信箱:   mkdir-tw@gmail.com <br/>
+							合作招募:   reimu@mkdir.tw <br/>
+							IRC:   mkdir-tw@freenode <br/>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
